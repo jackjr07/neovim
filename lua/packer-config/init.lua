@@ -19,5 +19,11 @@ return require('packer').startup(function(use)
   use 'L3MON4D3/LuaSnip' -- Snippets plugin
   use 'rcarriga/nvim-notify' -- Side nvim notification
   use 'nvim-lualine/lualine.nvim' -- Lua line power line
+  use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' } -- Treesitter
+  use {
+      'nvim-telescope/telescope.nvim', tag = '0.1.2',
+      -- or                            , branch = '0.1.x',
+      requires = { {'nvim-lua/plenary.nvim'} }
+  }
 
 end)
